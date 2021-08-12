@@ -35,7 +35,8 @@ def result(x: list):
     res = {}
     for el in x:
         params = el.split('-')
-        res_params = rate(params[0], params[1])  # считаем курс всех валютных пар по очереди
+        res_params = rate(params[0], params[1])
+        """ считаем курс всех валютных пар по очереди """
         res[el] = res_params
     body = {'rate': res}
     """ в реальности здесь скорее будет не body, а part_body, как часть json-строки,
